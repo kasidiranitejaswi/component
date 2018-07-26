@@ -1,0 +1,12 @@
+<input [(ngModel)]="searchText" class="form-control" placeholder="search">
+
+
+
+<div class="col-sm-3" *ngFor="let doctor of doctors | searchFuntionality : searchText"  style="margin-top:30px;">
+  <div class="form-group">
+    Name : {{doctor.name}}
+  </div>
+  <div class="form-group">
+    Genere : {{doctor.specialist}}
+  </div>
+</div>

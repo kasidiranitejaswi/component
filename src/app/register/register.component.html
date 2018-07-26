@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row">
+    <form>
+        <form class="form-inline clearfix">
+            <div class="form-group col-lg-12">
+              <div class="row">
+              <label class="sr-only" for="exampleInputAmount"></label>
+              <div class="input-group phone col-lg-5">
+                <div class="input-group-addon "><i class="glyphicon glyphicon-user"></i></div>
+                <input type="text" class="form-control" [(ngModel)]="firstname" id="exampleInputAmount" placeholder="First Name">
+              </div>
+              <div class="input-group phone no-margin col-lg-5 pull-right">
+                  <div class="input-group-addon "><i class="glyphicon glyphicon-user"></i></div>
+                  <input type="text" class="form-control"  [(ngModel)]="lastname" id="exampleInputAmount" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="clear"></div>
+          <div class="form-group age">
+              <label for="exampleInputEmail1">Age</label>
+              <input type="email" class="form-control"  [(ngModel)]="age" id="exampleInputEmail1" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Gender</label>
+                <input type="text" class="form-control"  [(ngModel)]="gender" id="exampleInputEmail1" placeholder="Gender">
+              </div>
+            <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  [(ngModel)]="email" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="number" class="form-control" [(ngModel)]="number1" id="exampleInputPassword1" placeholder="number">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="number" class="form-control" [(ngModel)]="number2" id="exampleInputPassword1" placeholder="number">
+            </div>
+          <form class="form-inline">
+              <div class="form-group col-lg-12">
+                <div class="row">
+                <label class="sr-only" for="exampleInputAmount"></label>
+                <div class="input-group phone col-lg-5">
+                  <div class="input-group-addon "><i class="glyphicon glyphicon-phone-alt"></i></div>
+                  <input type="text" class="form-control"  [(ngModel)]="number1" id="exampleInputAmount" placeholder="">
+                </div>
+                <div class="input-group phone no-margin col-lg-5 pull-right">
+                    <div class="input-group-addon "><i class="glyphicon glyphicon-earphone"></i></div>
+                    <input type="text" class="form-control"  [(ngModel)]="number2" id="exampleInputAmount" placeholder="">
+                  </div>
+                </div>
+              </div>
+            </form>
+
+    </form>   
+    <div class="clear"></div>
+     <div class="margin-top">
+     <h4>Add Exp
+      <button type="button" class="btn btn-primary right" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+      <i class="glyphicon glyphicon-plus"></i>
+    </button></h4>
+    </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" >
+        <div class="modal-content" >
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Designation</label>
+                <input type="text" [(ngModel)]="data.designation"  #designation="ngModel" name="designation" class="form-control" id="recipient-name" >
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Description</label>
+                <textarea class="form-control" [(ngModel)]="data.description" #description="ngModel" id="message-text" name=description ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"  data-dismiss="modal" (click)='save()'>Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p *ngFor="let item of myarr">
+        {{item}}
+        
+      </p>
+
+
+      <!-- <p *ngFor="let item1 of myarr1">
+        {{item1}}
+        
+      </p>
+     -->
+    
+    </div>
+
+
